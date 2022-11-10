@@ -14,3 +14,4 @@ jobs:
         server: ftp.cluster029.hosting.ovh.net
         username: jessyfc
         password: ${{ secrets.ftp_password }}
+        server-dir: guill2027/
