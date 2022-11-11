@@ -45,7 +45,7 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
       keyLog[e.code] = true;
 
       if(keyLog["ArrowDown"] && keyLog["KeyB"]) {
-        var son = document.getElementById("ouaf-sound");
+        var son = document.getElementById("z-sound");
         son.play();
       }
     }
@@ -60,6 +60,13 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
     div.innerHTML = '<iframe id="twitch-iframe" src="https://clips.twitch.tv/embed?clip=BlightedProductiveDaikonCclamChamp-RoDHckb2Aq5CRkkr&parent=www.example.com&parent=guill2027.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>';
   }
 </script>
+
+<audio controls id="ouaf-sound" style="display:none;">
+  <source src="res/ouaf.ogg" type="audio/ogg">
+</audio>
+<audio controls id="z-sound" style="display:none;">
+  <source src="res/z.ogg" type="audio/ogg">
+</audio>
 
   <div class="container">
     <div class="tile is-ancestor">
@@ -126,9 +133,7 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
                   <footer class="card-footer">
                     <a href="https://www.twitch.tv/theguill84" class="card-footer-item">Suivre</a>
                     <a class="card-footer-item" onclick="ouaf();">Ouaf</a>
-                    <audio controls id="ouaf-sound" style="display:none;">
-                      <source src="res/ouaf.ogg" type="audio/ogg">
-                    </audio>
+                    
                   </footer>
 
               </div>
