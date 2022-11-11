@@ -57,7 +57,7 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
   function okTwitch() {
     var div = document.getElementById("disclamer-twitch");
 
-    div.innerHTML = '<iframe id="twitch-iframe" src="https://clips.twitch.tv/embed?clip=BlightedProductiveDaikonCclamChamp-RoDHckb2Aq5CRkkr&parent=www.example.com&parent=guill2027.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620" style="display: none;"></iframe>';
+    div.innerHTML = '<iframe id="twitch-iframe" src="https://clips.twitch.tv/embed?clip=BlightedProductiveDaikonCclamChamp-RoDHckb2Aq5CRkkr&parent=www.example.com&parent=guill2027.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>';
   }
 </script>
 
@@ -154,13 +154,36 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
         </div>
 
         <div class="tile is-parent">
-          <div class="tile is-child is-4"></div>
-          <footer class="footer tile is-child is-4">
+          <div class="tile is-child is-3"></div>
+          <footer class="footer tile is-child is-6">
             <div class="content has-text-centered">
               <p>
-                <strong>Guill2027</strong> par <a href="https://twitter.com/Jessjessjessmdr">Yepssy#2650</a>.
+                <strong>Guill2027</strong> par <i>Yepssy#2650</i>.
               </p>
-              <a href="legal.html"><button class="button is-info is-rounded">Mentions Légales</button></a>
+
+
+
+              <a href="https://twitter.com/jessjessjessmdr">
+                <button class="button is-primary">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>@jessjessjessmdr</span>
+                </button>
+              </a>
+
+              <a href="https://github.com/jessyfallavier">
+                <button class="button is-primary">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>@jessyfallavier</span>
+                </button>
+              </a>
+              
+              <a href="legal.html">
+                <button class="button is-info is-rounded">Mentions Légales</button>
+              </a>
             </div>
           </footer>
         </div>
