@@ -53,6 +53,14 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
   document.onkeyup = function (e) {
     keyLog[e.code] = false;
   }
+
+  function okTwitch() {
+    var iframe = document.getElementById("");
+    var div = document.getElementById("");
+
+    iframe.style.display = "initial";
+    div.style.display = "none";
+  }
 </script>
 
   <div class="container">
@@ -86,7 +94,7 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
                 <p class="is-size-5">Transformer le tunnel sous la manche en un véritable aquarium sous-marin.</p>
                 
                 <h3 class="title is-1"> Images </h3>
-                
+
 
                 </div>
               </article>
@@ -111,9 +119,8 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
                       </div>
                   
                       <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
+                      <p>Le best-streamer :)</p>
+                        
                       <br>
                       <time datetime="2022-11-10">11 Novembre 2022</time>
                       </div>
@@ -136,7 +143,12 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
                     <p>Clip</p>
                   </div>
                   <div class="message-body">
-                    <iframe src="https://clips.twitch.tv/embed?clip=BlightedProductiveDaikonCclamChamp-RoDHckb2Aq5CRkkr&parent=www.example.com&parent=guill2027.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+                    <iframe id="twitch-iframe" src="https://clips.twitch.tv/embed?clip=BlightedProductiveDaikonCclamChamp-RoDHckb2Aq5CRkkr&parent=www.example.com&parent=guill2027.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620" style="display: none;"></iframe>
+                    <div id="disclamer-twitch">
+                      <p>J'accepte les cookies de twitch.tv ?</p>
+                      <button class="button is-succes is-rounded" onclick="okTwitch();">Oui</button>
+                      <button class="button is-danger is-rounded">Non</button>
+                    </div>
                   </div>
                 </article>
               </article>
@@ -150,7 +162,7 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
               <p>
                 <strong>Guill2027</strong> par <a href="https://twitter.com/Jessjessjessmdr">Yepssy#2650</a>.
               </p>
-              <button class="button is-info is-rounded">Mentions Légales</button>
+              <a href="legal.html"><button class="button is-info is-rounded">Mentions Légales</button></a>
             </div>
           </footer>
         </div>
