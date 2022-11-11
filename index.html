@@ -55,11 +55,9 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
   }
 
   function okTwitch() {
-    var iframe = document.getElementById("");
-    var div = document.getElementById("");
+    var div = document.getElementById("disclamer-twitch");
 
-    iframe.style.display = "initial";
-    div.style.display = "none";
+    div.innerHTML = '<iframe id="twitch-iframe" src="https://clips.twitch.tv/embed?clip=BlightedProductiveDaikonCclamChamp-RoDHckb2Aq5CRkkr&parent=www.example.com&parent=guill2027.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620" style="display: none;"></iframe>';
   }
 </script>
 
@@ -126,7 +124,7 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
                       </div>
                   </div>
                   <footer class="card-footer">
-                    <a href="https://https://www.twitch.tv/theguill84" class="card-footer-item">Suivre</a>
+                    <a href="https://www.twitch.tv/theguill84" class="card-footer-item">Suivre</a>
                     <a class="card-footer-item" onclick="ouaf();">Ouaf</a>
                     <audio controls id="ouaf-sound" style="display:none;">
                       <source src="res/ouaf.ogg" type="audio/ogg">
@@ -143,10 +141,10 @@ scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
                     <p>Clip</p>
                   </div>
                   <div class="message-body">
-                    <iframe id="twitch-iframe" src="https://clips.twitch.tv/embed?clip=BlightedProductiveDaikonCclamChamp-RoDHckb2Aq5CRkkr&parent=www.example.com&parent=guill2027.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620" style="display: none;"></iframe>
+                    
                     <div id="disclamer-twitch">
                       <p>J'accepte les cookies de twitch.tv ?</p>
-                      <button class="button is-succes is-rounded" onclick="okTwitch();">Oui</button>
+                      <button class="button is-success is-rounded" onclick="okTwitch();">Oui</button>
                       <button class="button is-danger is-rounded">Non</button>
                     </div>
                   </div>
