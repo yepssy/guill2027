@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="icon" type="image/x-icon" href="/res/favicon.png">
+    <title>Guill 2027</title>
+</head>
+<body style="background: rgb(104,109,224);
+background: fixed linear-gradient(135deg, rgba(126, 214, 223,1.0) 0%, rgba(104,109,224,1) 50%, rgba(224,86,253,1) 100%) 50% / 200%;
+animation: animationFond 10s cubic-bezier(.45,.05,.55,.95) infinite;
+scrollbar-width: thin;
+scrollbar-color: rgba(104,109,224,1) rgba(0,0,0,1); min-height: 100vh;
+">
+
+<script>
+  function disclamerDivHide() {
+    var disclamerDiv = document.getElementById("disclamer-div");
+    disclamerDiv.style.display = "none";
+  }
+
+  function headChange(b) {
+    var mcface = document.getElementById("mcface");
+    var pokeface = document.getElementById("pokeface");
+    if (b) {
+      mcface.style.display = "none";
+      pokeface.style.display = "initial";
+    } else {
+      mcface.style.display = "initial";
+      pokeface.style.display = "none";
+    }
+  }
+
+  function ouaf() {
+    var son = document.getElementById("ouaf-sound");
+
+    son.play();
+  }
+
+  const keyLog = {};
+  document.onkeydown = function (e) {
+    if (e.code == "ArrowDown" || e.code === 'KeyB') {
+      keyLog[e.code] = true;
+
+      if(keyLog["ArrowDown"] && keyLog["KeyB"]) {
+        var son = document.getElementById("z-sound");
+        son.play();
+      }
+    }
+  }
+  document.onkeyup = function (e) {
+    keyLog[e.code] = false;
+  }
+
+  function okTwitch() {
+    var div = document.getElementById("disclamer-twitch");
+
+    div.innerHTML = '<iframe id="twitch-iframe" src="https://clips.twitch.tv/embed?clip=BlightedProductiveDaikonCclamChamp-RoDHckb2Aq5CRkkr&parent=www.example.com&parent=guill2027.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>';
+  }
+</script>
+
+<audio controls id="ouaf-sound" style="display:none;">
+  <source src="res/ouaf.ogg" type="audio/ogg">
+</audio>
+<audio controls id="z-sound" style="display:none;">
+  <source src="res/z.ogg" type="audio/ogg">
+</audio>
+
+  <div class="container">
+    <div class="tile is-ancestor">
+
+      <div class="tile is-parent is-vertical">
+        <div class="tile box" style="margin-top: 1vh;">
+          <img src="res/logo.gif" style="height:8vh; max-height:none;">
+          <h1 class="title is-1" style="padding-left: 2vw;"> Bienvenue sur TheSite84* </h1>
+        </div>
+
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <div class="tile is-child notification is-danger" id="disclamer-div">
+              <button class="delete" onclick="disclamerDivHide();"></button>
+              <p class="is-size-5">
+                Ce site est totalement parodique et a été crée par un viewer ! <br>
+                Il n'a jamais été question porter atteinte à la notoriété de TheGuill84.
+                <br>
+                En cas de réclamation, suivre les instructions ici : 
+                <a href="legal#reclamation" class="tag is-link is-danger is-light">Réclamation</a>
+
+              </p>
+            </div>
+            
+            <article class="tile is-child message is-info">
+              <div class="message-header">
+                <p>Son Projet : </p>
+              </div>
+              <div class="message-body">
+                <p class="is-size-5">Transformer le tunnel sous la manche en un véritable aquarium sous-marin.</p>
+                
+                <h4 class="title is-4"> Images top-secrètes : </h4>
+                <figure class="image is-16by9">
+                  <img src="res/schema.png">
+                </figure>
+
+                <p class="is-size-5">Non aux <strong>rêves brisés</strong>!</p>
+
+                </div>
+              </article>
+        
+        
+            </div>
+
+            <div class="tile is-parent is-vertical">
+              <div class="tile is-child card is-info">
+                  <div class="card-content">
+                      <div class="media">
+                      <div class="media-left">
+                          <figure class="image is-48x48">
+                          <img id="mcface" src="res/mcface.png" alt="Placeholder image" onclick="headChange(true);">
+                          <img id="pokeface"src="res/pokeface.png" alt="Placeholder image" style="display: none;" onclick="headChange(false);">
+                          </figure>
+                      </div>
+                      <div class="media-content">
+                          <p class="title is-4">Guill</p>
+                          <p class="subtitle is-6">@TheGuill84</p>
+                      </div>
+                      </div>
+                  
+                      <div class="content">
+                      <p>Le best-streamer depuis 2018 :) <br> 
+                      Bonne chance dans tes nouveaux projets !!
+                      </p>
+                        
+                      <br>
+                      <time datetime="2022-11-10">11 Novembre 2022</time>
+                      </div>
+                  </div>
+                  <footer class="card-footer">
+                    <a href="https://www.twitch.tv/theguill84" class="card-footer-item">Suivre</a>
+                    <a class="card-footer-item" onclick="ouaf();">Ouaf</a>
+                    
+                  </footer>
+
+              </div>
+  
+              <article class="tile is-child">
+                
+
+                <article class="message">
+                  <div class="message-header">
+                    <p>Clip</p>
+                  </div>
+                  <div class="message-body">
+                    
+                    <div id="disclamer-twitch">
+                      <p>J'accepte les cookies de twitch.tv ?</p>
+                      <button class="button is-success is-rounded" onclick="okTwitch();">Oui</button>
+                      <button class="button is-danger is-rounded">Non</button>
+                    </div>
+                  </div>
+                </article>
+              </article>
+          </div>
+        </div>
+
+        <div class="tile is-parent">
+          <div class="tile is-child is-3"></div>
+          <footer class="footer tile is-child is-6">
+            <div class="content has-text-centered">
+              <p>
+                <strong>Guill2027</strong> par <i>Yepssy#2650</i>.
+              </p>
+
+              <a href="https://twitter.com/jessjessjessmdr">
+                <button class="button is-info is-rounded">Twitter</button>
+              </a>
+
+              <a href="https://github.com/jessyfallavier/guill2027">
+                <button class="button is-info is-rounded">GitHub</button>
+              </a>
+              
+              <a href="legal">
+                <button class="button is-link is-rounded">Mentions Légales</button>
+              </a>
+
+              <figure class="image is-96x96" style="margin: auto; padding: 1vh;">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=8064491&style=0044&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+              </figure>
+            </div>
+          </footer>
+        </div>
+    
+      </div>
+
+
+    </div>
+  </div>
+    
+</body>
+</html>
